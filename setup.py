@@ -11,7 +11,7 @@ setup(
 	version=version,
 	description="CPME Customization",
 	author="Happenize",
-	author_email="info@happrnize",
+	author_email="info@happenize.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

@@ -6,7 +6,7 @@ app_publisher = "Happenize"
 app_description = "CPME Customization"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "info@happrnize"
+app_email = "info@happenize.com"
 app_license = "MIT"
 
 # Includes in <head>
