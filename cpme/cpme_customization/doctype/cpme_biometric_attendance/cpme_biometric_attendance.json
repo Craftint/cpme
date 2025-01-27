@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-03 14:13:53.793003",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "person_id",
+  "related_employee",
+  "employee_name",
+  "department",
+  "position",
+  "gender",
+  "column_break_jarlw",
+  "attendance_date",
+  "attendance_day_of_week",
+  "timetable",
+  "attendance_first_in",
+  "attendance_last_out",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "person_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Person ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "related_employee",
+   "fieldtype": "Link",
+   "label": "Related Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_day_of_week",
+   "fieldtype": "Data",
+   "label": "Attendance Day Of Week"
+  },
+  {
+   "fieldname": "timetable",
+   "fieldtype": "Data",
+   "label": "Timetable"
+  },
+  {
+   "fieldname": "attendance_first_in",
+   "fieldtype": "Time",
+   "label": "First-In"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CPME Biometric Attendance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jarlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "attendance_last_out",
+   "fieldtype": "Time",
+   "label": "Last-Out"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-03 15:19:41.998318",
+ "modified_by": "Administrator",
+ "module": "Cpme Customization",
+ "name": "CPME Biometric Attendance",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

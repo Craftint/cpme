@@ -1,0 +1,266 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:service_level",
+ "creation": "2023-11-02 23:37:55.730925",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "document_type",
+  "default_priority",
+  "column_break_5gvca",
+  "service_level",
+  "enabled",
+  "filters_section",
+  "default_service_level_agreement",
+  "entity_type",
+  "entity",
+  "column_break_15",
+  "condition",
+  "agreement_details_section",
+  "start_date",
+  "column_break_7",
+  "end_date",
+  "response_and_resolution_time_section",
+  "apply_sla_for_resolution",
+  "priorities",
+  "support_and_resolution_section_break",
+  "holiday_list",
+  "support_and_resolution",
+  "terms_and_conditions",
+  "terms",
+  "term_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Apply On",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_priority",
+   "fieldtype": "Link",
+   "label": "Default Priority",
+   "options": "Issue Priority"
+  },
+  {
+   "fieldname": "column_break_5gvca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Level Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "filters_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment Conditions"
+  },
+  {
+   "default": "0",
+   "fieldname": "default_service_level_agreement",
+   "fieldtype": "Check",
+   "label": "Default Service Level Agreement"
+  },
+  {
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "label": "Entity Type",
+   "options": "\nCustomer\nCustomer Group\nTerritory"
+  },
+  {
+   "fieldname": "entity",
+   "fieldtype": "Dynamic Link",
+   "label": "Entity",
+   "options": "entity_type"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "label": "Condition",
+   "options": "PythonExpression"
+  },
+  {
+   "fieldname": "agreement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Valid From"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "response_and_resolution_time_section",
+   "fieldtype": "Section Break",
+   "label": "Response and Resolution"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_sla_for_resolution",
+   "fieldtype": "Check",
+   "label": "Apply SLA for Resolution Time"
+  },
+  {
+   "fieldname": "priorities",
+   "fieldtype": "Table",
+   "label": "Priorities",
+   "options": "Service Level Priority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "support_and_resolution_section_break",
+   "fieldtype": "Section Break",
+   "label": "Working Hours"
+  },
+  {
+   "fieldname": "holiday_list",
+   "fieldtype": "Link",
+   "label": "Holiday List",
+   "options": "Holiday List"
+  },
+  {
+   "fieldname": "support_and_resolution",
+   "fieldtype": "Table",
+   "label": "Working Hours",
+   "options": "Service Day"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Section Break",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Link",
+   "label": "Terms",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fetch_from": "terms.terms",
+   "fieldname": "term_details",
+   "fieldtype": "Text Editor",
+   "label": "Term Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CPME SLA",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "CPME SLA",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "AMC-SLA-.YYYY.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "AMC-SLA-.YYYY.-",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-21 15:26:26.667390",
+ "modified_by": "Administrator",
+ "module": "Cpme Customization",
+ "name": "CPME SLA",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Support Team",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "role": "All",
+   "select": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "service_level",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "service_level",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
